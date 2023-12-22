@@ -3,40 +3,40 @@
 
 #include <iostream>
 #include <opencv2/opencv.hpp>
-
+#include <opencv2/imgproc/types_c.h>
 class WaterMarkText
 {
 public:
 
 	/******************************
-	Ìí¼ÓÎÄ×ÖË®Ó¡º¯Êı¡ª¡ª¡ª¡ª´¦Àíµ¥Í¨µÀÍ¼Ïñ
-	input: ÊäÈëµ¥Í¨µÀÍ¼Ïñ
-	text: Ìí¼ÓË®Ó¡ÎÄ×Ö
+	æ·»åŠ æ–‡å­—æ°´å°å‡½æ•°â€”â€”â€”â€”å¤„ç†å•é€šé“å›¾åƒ
+	input: è¾“å…¥å•é€šé“å›¾åƒ
+	text: æ·»åŠ æ°´å°æ–‡å­—
 	*******************************/
 	cv::Mat addTextWatermarkSingleChannel(const cv::Mat &input, const std::string &text);
 
 	/******************************
-	Ìí¼ÓÎÄ×ÖË®Ó¡º¯Êı¡ª¡ª¡ª¡ª´¦Àí²ÊÉ«Í¼Ïñ
-	input: ÊäÈë²ÊÉ«Í¼Ïñ
-	text: Ìí¼ÓË®Ó¡ÎÄ×Ö
+	æ·»åŠ æ–‡å­—æ°´å°å‡½æ•°â€”â€”â€”â€”å¤„ç†å½©è‰²å›¾åƒ
+	input: è¾“å…¥å½©è‰²å›¾åƒ
+	text: æ·»åŠ æ°´å°æ–‡å­—
 	*******************************/
 	cv::Mat addTextWatermarkColorImage(const cv::Mat &inputImage, const std::string &text);
 
 	/******************************
-	ÌáÈ¡³öÎÄ×ÖË®Ó¡¡ª¡ª´¦Àí»Ò¶ÈÍ¼Ïñ
-	input: ÊäÈëÍ¼Ïñ
+	æå–å‡ºæ–‡å­—æ°´å°â€”â€”å¤„ç†ç°åº¦å›¾åƒ
+	input: è¾“å…¥å›¾åƒ
 	*******************************/
 	cv::Mat getWaterMarkSingleChannel(const cv::Mat &input);
 
 	/******************************
-	ÌáÈ¡³öÎÄ×ÖË®Ó¡¡ª¡ª´¦Àí²ÊÉ«Í¼Ïñ
-	input: ÊäÈëÍ¼Ïñ
+	æå–å‡ºæ–‡å­—æ°´å°â€”â€”å¤„ç†å½©è‰²å›¾åƒ
+	input: è¾“å…¥å›¾åƒ
 	*******************************/
 	cv::Mat getWatermarkColorImage(const cv::Mat &input);
 
 	/******************************
-	Í¼Ïñ×ªÖÃ
-	input: ÊäÈëÍ¼Ïñ
+	å›¾åƒè½¬ç½®
+	input: è¾“å…¥å›¾åƒ
 	*******************************/
 	cv::Mat getTransposeImage(const cv::Mat &input);
 
